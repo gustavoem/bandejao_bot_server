@@ -14,7 +14,7 @@ def fetch_bandex ():
     out_str = str (ssh_stdout.read ().decode('utf-8'))
     terminal_codes_regex = re.compile(r'(\x9B|\x1B\[)[0-?]*[ -/]*[@-~]')
     out_str = terminal_codes_regex.sub ('', out_str)
-    print (out_str)
+    # print (out_str)
     ssh.close()
     return out_str
 
